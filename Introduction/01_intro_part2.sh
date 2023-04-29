@@ -66,3 +66,15 @@ echo "${str1,,}"  #=> "hello world!" (all lowercase)
 str1="hello world!"
 echo "${str1^}"   #=> "Hello world!" (uppercase 1st letter)
 echo "${str1^^}"  #=> "HELLO WORLD!" (all uppercase)
+
+
+
+# default values
+
+: '
+${foo:-val}	$foo, or val if unset (or null)
+${foo:=val}	Set $foo to val if unset (or null)
+${foo:+val}	val if $foo is set (and not null)
+${foo:?message}	Show error message and exit if $foo is unset (or null)
+# Omitting the : removes the (non)nullity checks, e.g. ${foo-val} expands to val if unset otherwise $foo.
+'
