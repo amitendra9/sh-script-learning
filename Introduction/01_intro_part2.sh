@@ -55,3 +55,14 @@ echo "${str/foo/bar}"; # /path/to/bar.cpp
 # ${#foo}	Length of $foo
 
 echo ${#name};
+
+
+# manipulation
+
+str1="HELLO WORLD!"
+echo "${str1,}"   #=> "hELLO WORLD!" (lowercase 1st letter)
+echo "${str1,,}"  #=> "hello world!" (all lowercase)
+
+str1="hello world!"
+echo "${str1^}"   #=> "Hello world!" (uppercase 1st letter)
+echo "${str1^^}"  #=> "HELLO WORLD!" (all uppercase)
