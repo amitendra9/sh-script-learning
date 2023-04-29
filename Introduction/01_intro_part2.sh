@@ -22,18 +22,18 @@ echo "${food:-Cake}"  #=> $food or "Cake"
 
 # Substitution
 
-str="/path/to/foo.cpp"
-echo "${str%.cpp}"    # /path/to/foo
-echo "${str%.cpp}.o"  # /path/to/foo.o
-echo "${str%/*}"      # /path/to
+str="/path/to/foo.cpp";
+echo "${str%.cpp}" ;   # /path/to/foo
+echo "${str%.cpp}.o";  # /path/to/foo.o
+echo "${str%/*}" ;     # /path/to
 
-echo "${str##*.}"     # cpp (extension)
-echo "${str##*/}"     # foo.cpp (basepath)
+echo "${str##*.}" ;    # cpp (extension)
+echo "${str##*/}" ;    # foo.cpp (basepath)
 
-echo "${str#*/}"      # path/to/foo.cpp
-echo "${str##*/}"     # foo.cpp
+echo "${str#*/}" ;     # path/to/foo.cpp
+echo "${str##*/}" ;    # foo.cpp
 
-echo "${str/foo/bar}" # /path/to/bar.cpp
+echo "${str/foo/bar}"; # /path/to/bar.cpp
 
 : '
 
@@ -48,3 +48,10 @@ echo "${str/foo/bar}" # /path/to/bar.cpp
 # ${foo/%from/to}	Replace suffix
 # ${foo/#from/to}	Replace prefix
 '
+
+
+# length of string
+
+# ${#foo}	Length of $foo
+
+echo ${#name};
