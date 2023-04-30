@@ -14,3 +14,8 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo "${{ github.token }}"
+
+      - name: python scripts
+        shell: python
+        run: |
+           print("hello world!")
