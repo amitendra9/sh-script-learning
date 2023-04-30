@@ -1,0 +1,16 @@
+name: Action workflow
+
+on: 
+  [push]
+jobs:
+  first-jobs:
+    runs-on: ubuntu
+    steps:
+      - name: List Files 
+        run: |
+          pwd
+          ls -la
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
